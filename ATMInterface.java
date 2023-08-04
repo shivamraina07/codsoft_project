@@ -46,22 +46,22 @@ public class ATMInterface {
     }
 
     private static void checkBalance() {
-        System.out.println("Your balance: $" + balance);
+        System.out.println("Your balance: Rs" + balance);
     }
 
     private static void depositMoney(double amount) {
         balance += amount;
-        System.out.println("Deposited $" + amount + " successfully.");
+        System.out.println("Deposited Rs" + amount + " successfully.");
         checkBalance();
     }
 
     private static void withdrawMoney(double amount) {
         if (amount <= balance) {
             balance -= amount;
-            System.out.println("Withdrawn $" + amount + " successfully.");
+            System.out.println("Withdrawn Rs" + amount + " successfully.");
             checkBalance();
         } else {
-            System.out.println("Insufficient funds. Cannot withdraw $" + amount);
+            System.out.println("Insufficient funds. Cannot withdraw Rs" + amount);
         }
     }
 }
